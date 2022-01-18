@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cursobd-cinewebapp/static/css/main.5c3b6f36.css",
+    "main.js": "/cursobd-cinewebapp/static/js/main.f14c3a02.js",
+    "index.html": "/cursobd-cinewebapp/index.html",
+    "main.5c3b6f36.css.map": "/cursobd-cinewebapp/static/css/main.5c3b6f36.css.map",
+    "main.f14c3a02.js.map": "/cursobd-cinewebapp/static/js/main.f14c3a02.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5c3b6f36.css",
+    "static/js/main.f14c3a02.js"
+  ]
+}
