@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/cursobd-cinewebapp/static/css/main.5c3b6f36.css",
-    "main.js": "/cursobd-cinewebapp/static/js/main.f14c3a02.js",
+    "main.css": "/cursobd-cinewebapp/static/css/main.54c4256b.css",
+    "main.js": "/cursobd-cinewebapp/static/js/main.a75e9de7.js",
     "index.html": "/cursobd-cinewebapp/index.html",
-    "main.5c3b6f36.css.map": "/cursobd-cinewebapp/static/css/main.5c3b6f36.css.map",
-    "main.f14c3a02.js.map": "/cursobd-cinewebapp/static/js/main.f14c3a02.js.map"
+    "main.54c4256b.css.map": "/cursobd-cinewebapp/static/css/main.54c4256b.css.map",
+    "main.a75e9de7.js.map": "/cursobd-cinewebapp/static/js/main.a75e9de7.js.map"
   },
   "entrypoints": [
-    "static/css/main.5c3b6f36.css",
-    "static/js/main.f14c3a02.js"
+    "static/css/main.54c4256b.css",
+    "static/js/main.a75e9de7.js"
   ]
 }
