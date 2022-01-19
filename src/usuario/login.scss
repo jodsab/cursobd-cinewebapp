@@ -1,0 +1,40 @@
+.login_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: space-between;
+
+    .dato{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin: 4px;
+
+        label{
+            align-self: flex-start;
+            color: black;
+        }
+        input{
+            padding: 5px 7px;
+            border: 1px solid rgb(255, 116, 116);
+            border-radius: 5px;
+        }
+        input:focus{
+            outline: none;
+        }
+    }
+
+    .btn_submit{
+        border: none;
+        padding: 5px 8px;
+        background-color: rgb(255, 103, 103);
+        color: white;
+        font-weight: 600;
+        cursor:pointer;
+        margin-top: 10px;
+    }
+
+    .btn_submit:hover{
+        background-color: rgb(255, 46, 46);
+    }
+}

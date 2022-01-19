@@ -1,0 +1,33 @@
+.peliculas_container{
+    .titulo{
+        font-size: 20px;
+    }
+
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(270px, 1fr) );
+        gap: 30px;
+
+        .pelicula_item{
+            cursor: pointer;
+            padding: 5px 0 25px 0;
+            background-color: #181725;
+            border-radius: 15px;            
+
+            .foto_pelicula{
+                width: 240px;
+                height: 350px;
+                object-fit: cover;
+                
+            }
+        }
+
+        .pelicula_item:hover{
+            background-color: #111018;
+
+        }
+    }
+}

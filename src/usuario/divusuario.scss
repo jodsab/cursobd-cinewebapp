@@ -1,0 +1,45 @@
+.divusuario_container{
+    background-color: white;
+    padding: 12px;
+    box-shadow: 0 0 4px black;
+
+    .btns_alt{
+        display: flex;
+        box-shadow: 0 4px 2px -2px rgba(110, 0, 0, .4);
+
+        .btn{
+            border: none;
+            background-color: white;
+            font-size: 24px;
+            font-weight: 600;
+            color: rgb(146, 146, 146);
+            cursor: pointer;
+        }
+
+        .btn:hover{
+            color: black;
+        }
+
+        .btn_active:hover{
+            color: red;
+        }
+        .btn_false:hover{
+            color: red;
+        }
+
+        .btn_active{
+            color: red;
+        }
+
+        .btn_false{
+            color: red;
+        }
+    }
+
+    .logger_container{
+        height: 170px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

@@ -1,0 +1,83 @@
+import {useEffect, useState} from 'react'
+
+import './peliculas.scss'
+
+const URL_PELICULAS = "http://localhost/bd-cine-webapp/peliculas/peliculas.php";
+
+const fetchPelis = async (url, data) => {
+
+    const resp = await fetch (url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    const json = await resp.json();
+
+    return json;
+}
+
+export function Peliculas() {
+
+    const [peliculas, setPeliculas] = useState([]);
+
+    const dataPelis = async () => {
+        const logdata = {
+            "user_nombre": 'Lisett'
+
+        }
+        const resPeliculas = await fetchPelis(URL_PELICULAS, logdata);
+        setPeliculas(resPeliculas)
+        console.log(resPeliculas);
+        
+    }
+
+    function decode64Img(img64) {
+        console.log(btoa(img64));
+
+        const respuesta = btoa(img64);
+        
+        return respuesta
+    }
+
+    function encode64Img(img64) {
+
+        console.log(atob(img64));
+
+        const respuesta = atob(img64);
+        
+        return respuesta
+    }
+
+    useEffect(async () => {
+        console.log('first');
+        await dataPelis();
+        console.log('second');
+        
+    }, []);
+
+    return (
+        <div className="peliculas_container">
+            <div>
+                <p className='titulo'>
+                    Cartelera
+                </p>
+            </div>            
+            <ul>            
+                {
+                    peliculas.map((e,key) => 
+                    <li key={key} className='pelicula_item'>
+                        <p>{e.peliId}</p>
+                        <img className='foto_pelicula' src={`data:image/jpg;base64,${e.pelifoto}`} alt={e.pelifoto} />
+                    </li>
+                        )
+                }          
+            </ul>            
+            <div>
+            </div>
+            
+        </div>
+    )
+}

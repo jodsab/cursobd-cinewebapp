@@ -1,0 +1,18 @@
+.footer_container{
+    box-shadow: 0 0-1px 1px rgba(255, 55, 55, .6);
+    padding: 12px;
+
+    .redes{
+        .icon{
+            cursor: pointer;
+            padding: 5px;
+        }
+        .icon:hover{
+            color: rgb(255, 116, 116);
+        }
+    }
+
+    .derechos{
+        margin: 0;
+    }
+}
