@@ -1,15 +1,33 @@
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
 
 import { DivUsuario } from "../usuario/DivUsuario";
+import { Perfil } from '../usuario/Perfil';
 
 import { FaUserCircle } from "react-icons/fa";
 import { BiSearch } from "react-icons/bi";
+
+import {getCurrentUser, setCurrentUser, deleteUser} from '../helpers/localstorageuser';
 
 import './navbar.scss'
 
 export function Navbar() {
 
+  const [conectado, setConectado] = useState(false);
   const [divUser, setDivUser] = useState(false);
+
+  useEffect(() => {
+
+    console.log(getCurrentUser());
+    
+    if(getCurrentUser() !== null){
+      setConectado(true)
+    }
+    else{
+      setConectado(false)
+    }
+    console.log(conectado);
+
+  }, []);
 
   return (
     <div className="navbar_container"> 
@@ -19,7 +37,9 @@ export function Navbar() {
       <ul>
         <li onClick={()=>{setDivUser(true)} }>
           <FaUserCircle className="icon" />
-          <p>Usuario</p>
+          {
+            conectado ? <p>{getCurrentUser()}</p> : <p>Usuario</p>
+          }
         </li>
         <li>
           <BiSearch className="icon" />
@@ -31,7 +51,9 @@ export function Navbar() {
           <button className="close" onClick={()=>{setDivUser(false)}}>
             X
           </button>
-          <DivUsuario />
+          {
+            conectado ? <Perfil /> : <DivUsuario />
+          }
         </div>
       </div>
       

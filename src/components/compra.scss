@@ -1,0 +1,116 @@
+.compra_caontainer{
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .pantalla{
+        height: 40px;
+        width: 500px;
+        border: 1px solid white;
+        display: flex;  
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 20px auto;
+
+        .letra_pantalla{
+
+            p{
+                margin: 0;
+
+            }
+        }
+    }
+
+    .lista_butacas{
+        list-style-type: none;
+        width:70%;
+        max-width: 650px;
+        margin: auto;
+        padding: 40px;
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        /* grid-template-columns: repeat( auto-fit, minmax(50px, 1fr) ); */
+        gap: 20px;
+
+        .asiento{
+            margin-bottom: 5px;
+        }
+
+        .butaca{
+            padding: 12px;
+            border: 1px solid rgba(78, 78, 78, 0.445);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            p{
+                font-size: 14px;
+                margin: 0;
+            }
+        }
+
+        .butaca_libre{
+            cursor: pointer;
+            color: white;
+
+            .asiento_rojo{
+                
+            }
+        }
+
+        .butaca_libre:Hover{
+            color: green;
+        }
+        
+        .butaca_amarillo{
+            color: yellow;
+        }
+
+        .butaca_ocupada{
+            color: red;
+        }
+    }
+
+    .btn_comprar{
+        cursor: pointer;
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+        background-color: #ff2a2a;
+        border-radius: 8px;
+        padding: 7px 14px;
+    }
+    .btn_comprar:hover{
+        background-color: red;
+    }
+}
+
+@media (max-width: 900px){
+    .compra_caontainer{
+        .pantalla{
+            width: 80%;
+            height: 30px;
+        }
+
+        .lista_butacas{
+            padding: 0;
+            width: 95%;
+            gap: 8px;
+            font-size: 12px;
+            .butaca{
+                padding: 0;
+                p{
+                    font-size: 9px;
+                }
+            }
+            .asiento{
+                font-size: 10px;
+
+            }
+        }
+    }
+}

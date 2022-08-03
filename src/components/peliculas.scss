@@ -15,7 +15,11 @@
             cursor: pointer;
             padding: 5px 0 25px 0;
             background-color: #181725;
-            border-radius: 15px;            
+            border-radius: 15px;          
+            a{
+                text-decoration: none;
+                color: white;
+            }  
 
             .foto_pelicula{
                 width: 240px;

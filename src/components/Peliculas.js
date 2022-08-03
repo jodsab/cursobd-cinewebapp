@@ -1,4 +1,5 @@
 import {useEffect, useState} from 'react'
+import { Link } from 'react-router-dom';
 
 import './peliculas.scss'
 
@@ -30,31 +31,12 @@ export function Peliculas() {
         }
         const resPeliculas = await fetchPelis(URL_PELICULAS, logdata);
         setPeliculas(resPeliculas)
-        console.log(resPeliculas);
         
-    }
-
-    function decode64Img(img64) {
-        console.log(btoa(img64));
-
-        const respuesta = btoa(img64);
-        
-        return respuesta
-    }
-
-    function encode64Img(img64) {
-
-        console.log(atob(img64));
-
-        const respuesta = atob(img64);
-        
-        return respuesta
     }
 
     useEffect(async () => {
-        console.log('first');
+
         await dataPelis();
-        console.log('second');
         
     }, []);
 
@@ -69,8 +51,10 @@ export function Peliculas() {
                 {
                     peliculas.map((e,key) => 
                     <li key={key} className='pelicula_item'>
-                        <p>{e.peliId}</p>
-                        <img className='foto_pelicula' src={`data:image/jpg;base64,${e.pelifoto}`} alt={e.pelifoto} />
+                        <Link to={`/${e.idpelicula}`}>
+                            <p>{e.peliId}</p>
+                            <img className='foto_pelicula' src={`data:image/jpg;base64,${e.pelifoto}`} alt={e.pelifoto} />
+                        </Link>
                     </li>
                         )
                 }          

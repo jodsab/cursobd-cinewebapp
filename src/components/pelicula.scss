@@ -1,0 +1,126 @@
+.pelicula_container{
+    margin: 25px auto;
+
+    .cartelera_container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+        row-gap: 10px;
+        min-width: 280px;
+        width: 75%;
+        max-width: 800px;
+        margin: 20px auto;
+        background-color: #111018;
+        border-radius: 15px;
+        padding: 20px;
+
+        .div_foto{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            img{
+                width: 250px;
+            }
+            p{
+                margin: 0;
+                margin-top: 12px;
+            }
+        }
+
+        .div_info{
+            p{
+                margin: 0;
+            }
+
+            .title{
+                margin: 0;
+                font-size: 22px;
+                font-weight: 600;
+                padding: 0 0 6px 0;
+            }
+
+            .sinopsis{
+                margin-bottom: 50px;
+            }
+
+            .top_space{
+                margin-top: 10px;
+                text-align: start;
+            }
+        }
+    }
+
+    .locales_container{
+        margin: 14px auto;
+        .local_container{
+            width: 80%;
+            max-width: 600px;
+            margin: auto;
+            .local{
+                cursor: pointer;
+                padding: 7px;
+                border-radius: 12px;
+                background-color: white;
+                color: black;
+            }
+            .local:hover{
+                background-color: rgba(0, 0, 0, 0.3);
+                color: white;
+            }
+            .horario{
+                padding: 10px;
+                background-color: #111018;
+                display: none;
+
+                .div_linea{
+                    padding: 4px;
+                    width: 100%;
+                    border-radius: 8px;
+                    cursor: pointer;
+                }
+
+                .div_linea:hover{
+                    background-color: #3b37577c;
+                }
+
+                .cada_hora{
+                    text-decoration: none;
+                    color: white;
+                    
+                }
+
+            }
+
+            .horario.show{
+                display: block;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 600px){
+
+    .pelicula_container{
+    
+        .cartelera_container{
+            grid-template-columns: 1fr;
+            width: 90%;
+            margin: auto;
+            padding: 12px;
+
+            .div_info{
+    
+                .sinopsis{
+                    margin-bottom: 20px;
+                }
+
+                .top_space{
+                    font-size: 14px;
+                }
+            }
+    }
+    }
+}

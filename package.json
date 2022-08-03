@@ -1,6 +1,6 @@
 {
   "name": "bd-cine-webapp",
-
+  "homepage": "https://jodsab.github.io/cursobd-cinewebapp/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

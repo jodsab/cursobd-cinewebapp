@@ -1,0 +1,42 @@
+.perfil_container{
+    background-color: white;
+    color: black;
+    padding: 12px 15px;
+
+    .title{
+        font-size: 20px;
+    }
+
+    p{
+        margin: 0;
+    }
+
+    .btn_micuenta{
+        border: none;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .compras{
+        cursor: pointer;
+        padding: 7px 15px;
+        background-color: rgb(197, 72, 255);
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        margin: 20px auto;
+    }
+
+    .compras:hover{
+        background-color: rgb(182, 24, 255);
+    }
+
+    .cerrar{
+        cursor: pointer;
+        padding: 4px 7px;
+        background-color: rgb(255, 72, 72);
+        color: white;
+    }
+    .cerrar:hover{
+        background-color: rgb(255, 44, 44);
+    }
+}
